@@ -22,7 +22,7 @@ class RelativePositionPanel(bpy.types.Panel):
         row = layout.row()
         row.prop(obj, "name")
         
-        vector = obj.parent.matrix_world.translation - obj.matrix_world.translation
+        vector = obj.matrix_world.translation - obj.parent.matrix_world.translation
         
         row = layout.row()
         row.label(text="X: " + str(vector.x))
