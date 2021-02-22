@@ -30,9 +30,6 @@ class RelativePositionPanel(bpy.types.Panel):
         row.label(text="Z: " + str(vector.z))
         
 
-        row = layout.row()
-        row.operator("mesh.primitive_cube_add")
-
 
 def register():
     bpy.utils.register_class(RelativePositionPanel)
